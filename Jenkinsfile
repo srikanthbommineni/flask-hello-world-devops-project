@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Build Docker Image') {
             steps {
-              sh 'docker build -t $DOCKER_HUB_REPO .'
+              sh 'sudo docker build -t $DOCKER_HUB_REPO .'
             }
         }
   }
