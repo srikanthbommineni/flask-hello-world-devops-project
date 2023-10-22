@@ -4,8 +4,7 @@ pipeline {
   environment {
         DOCKER_HUB_REPO = "srikanthbommineni/flask"
         CONTAINER_NAME = "flask-hello-world"
-        DOCKERHUB_CREDENTIALS=credentials('dockerhub-credentials')
-    }
+        }
 
   stages {
     stage('Checkout') {
