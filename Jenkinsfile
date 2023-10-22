@@ -10,7 +10,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git url: ''https://github.com/srikanthbommineni/flask-hello-world-devops-project.git',branch: 'main'      
+        git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/srikanthbommineni/flask-hello-world-devops-project.git'      
       }
     }
     stage('Build Docker Image') {
