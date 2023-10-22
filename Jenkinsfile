@@ -10,14 +10,12 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        checkout scm
-        git credentialsId: 'GITHUB', url: 'https://github.com/srikanthbommineni/flask-hello-world-devops-project.git'
+        git url: ''https://github.com/srikanthbommineni/flask-hello-world-devops-project.git',branch: 'main'      
       }
     }
-    stage('Build') {
+    stage('Build Docker Image') {
             steps {
-                echo 'Building..'
-                sh 'docker build -t $DOCKER_HUB_REPO:latest .'
+              sh 'docker build -t $DOCKER_HUB_REPO .'
             }
         }
   }
