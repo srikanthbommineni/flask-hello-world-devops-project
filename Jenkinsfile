@@ -13,7 +13,7 @@ pipeline {
         git branch: 'main', credentialsId: 'GITHUB', url: 'https://github.com/srikanthbommineni/flask-hello-world-devops-project.git'      
       }
     }
-  }
+  
 
     stage('Build Docker Image') {
       steps {
@@ -25,3 +25,4 @@ pipeline {
     }
 }
 
+}
