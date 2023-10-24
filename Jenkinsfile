@@ -17,7 +17,7 @@ pipeline {
             steps {
               withCredentials([usernameColonPassword(credentialsId: 'DOCKERHUB_CREDENTIALS', variable: 'DOCKERHUB_CREDENTIALS')]) {
               sh "sudo docker login -u srikanthbommineni -p ${DOCKERHUB_CREDENTIALS}"
-              sh 'sudo docker build -t $DOCKER_HUB_REPO .'
+              sh 'sudo docker build -t srikanthbommineni/flask .'
             
           }
             }
