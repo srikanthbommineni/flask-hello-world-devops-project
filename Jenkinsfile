@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Build Docker Image') {
             steps {
-              sh "docker login -u srikanthbommineni -p Bsri1988@"
+              sh "sudo docker login -u srikanthbommineni -p Bsri1988@"
               sh 'sudo docker build -t $DOCKER_HUB_REPO .'
             }
         }
